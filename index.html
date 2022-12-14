@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>La bola de cristal </title>
+		<meta name="description" content="La bola de cristal ">
+		<meta name="keywords" content="bola cristal">
+		<meta name="author" content="Manuel Lara">		
+		<meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="images/mascota.png" type="image/x-icon">
+		<link rel="stylesheet" href="css/estilos.css">
+	</head>
+	<body>
+		<div class="contenedor">
+			<header class="modelo tipo1 color-fondo1">
+				<figure>
+					<img src="images/mascota.png" alt="logo bola de cristal">
+				</figure>
+				<div class="titulo color-texto1"><h1>La bola de cristal</h1></div>
+			</header>
+			<div id="caja" class="modelo tipo1">
+				<section class="color-fondo2">
+					<h2 id="texto">Piensa en tu pregunta y la bola te responderá sí o no. Cuando quieras, pulsa sobre la bola</h2>
+						<figure id="bola" class="thumb" onclick="adivina();">
+							<img src="images/mascota.png" alt="">
+						</figure>
+					<h2 id="num">&nbsp;</h2>
+					<div id="boton" onclick="limpiar();">
+						Realizar otra pregunta
+					</div>
+				</section>
+				<aside class="modelo tipo2 color-fondo3">
+					<div class="wit color-fondo2 color-texto1">
+						<h3>La respuesta es al azar, no es nada científico, esto es un juego</h3>
+					</div>
+					<div class="wit color-fondo2 color-texto2">
+						<h3>No use esto para tomar decisiones</h3>
+					</div>
+				</aside>
+			</div>
+			<footer class="modelo tipo1 color-fondo4 color-texto1">
+				<div class="autor">
+					<p>© Manuel Lara <span id="agno"></span></p>
+					<script>
+						anno=new Date();                
+						fecha=anno.getFullYear(); 
+						document.getElementById("agno").innerHTML = fecha.toString();             
+					</script>
+				</div>
+				<div class="val">
+					<p>
+						<a href="https://jigsaw.w3.org/css-validator/validator?uri=https://manlarestudio.github.io/bola.cristal/">
+							<img style="border:0;width:88px;height:31px"
+								src="https://jigsaw.w3.org/css-validator/images/vcss"
+								alt="¡CSS Válido!" >
+						</a>
+					</p>
+				</div>
+			</footer>
+		</div>
+		<script>
+		function adivina(){
+			var numero= Math.floor(Math.random()*2);
+			var nume=" ";
+			if (numero=="0") { nume="Sí"; }
+			if (numero=="1") { nume="No"; }
+			var elemento = document.getElementById("bola");
+   			elemento.style.display = 'none';
+			document.getElementById("texto").innerHTML = "Esta es la respuesta a tu pregunta"; 
+			document.getElementById("num").innerHTML = nume; 
+			var elemento1 = document.getElementById("boton");
+   			elemento1.style.display = 'block';
+			// setTimeout(limpiar, 7000);
+		  }
+		  function limpiar(){
+			var elemento1 = document.getElementById("boton");
+   			elemento1.style.display = 'none';
+			document.getElementById("num").innerHTML = " "; 
+			var elemento = document.getElementById("bola");
+   			elemento.style.display = 'block';
+			document.getElementById("texto").innerHTML = "Piensa en tu pregunta y pulsa sobre la bola"; 
+		  }
+		</script>  
+	</body>
+</html>

@@ -1,0 +1,181 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.color-fondo1 {
+	background: rgba(255, 255, 255, 0.343);	
+}
+.color-fondo2 {
+	background:#fff;
+}
+.color-fondo3 {
+	background: #100677;
+}
+
+.color-fondo4{
+	background: rgba(255, 255, 255, 0.343);
+}
+.color-texto1{
+	color:rgb(0, 0, 0);	
+}
+.color-texto2{
+	color: rgb(255, 6, 6);
+}
+.modelo{
+	display: flex;
+	flex-wrap:wrap;
+}
+.tipo1{
+	flex-direction:row;	
+}
+.tipo2{
+	flex-direction:column;	
+}
+
+body {
+	font-family: 'Verdana', sans-serif;
+	background: #000 url('../images/fondo.jpg');
+	background-size: cover;
+	background-attachment: fixed
+}
+
+.contenedor {
+	margin: auto;
+	width: 90%;
+	max-width: 1000px;
+}
+	header {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		justify-content:center;
+		align-items:center;
+		gap: 10px;
+	}
+		header figure {
+			width: 70px;
+		}
+		header figure img {
+			width: 100%;
+			transform: scaleX(-1);
+		}
+
+		section {
+			/* background: #FEDB5D; */
+			padding: 20px;
+			width: 100%;
+		}
+			section .thumb {
+				margin-bottom: 20px;
+				width: 50%;
+				margin: auto;
+				cursor: pointer;
+			}
+				section .thumb img {
+				vertical-align: top;
+	
+				width: 100%;
+			}
+			section  h2 {
+				margin-bottom: 20px;
+				font-weight: normal;
+				font-size: 32px;
+				text-align: center;
+			}
+			section #num {
+				font-size: 82px;
+			}
+			section  p {
+				margin-bottom: 20px;
+				font-size: 14px;
+				line-height: 27px;
+			}	
+		section #boton{
+			background: #100677;
+			color: #fff;
+			width: 50%;
+			margin: auto;
+			cursor: pointer;
+			text-align: center;
+			padding: 20px;
+			font-weight: 600;
+			display: none;
+		}	
+		aside {
+			width: 100%;
+			padding: 20px;
+			justify-content:flex-start;
+			gap: 20px;
+		}
+			aside .wit {
+				font-size: 30px;
+				text-align: center;
+				padding: 10px 10px;
+				width: 100%;
+			}
+				aside .wit figure {
+					width: 100%;
+					display: block;
+					margin: auto;
+				}
+					aside .wit figure img {
+						width: 100%;
+					}
+					aside .wit h3 {
+						font-size: 20px;
+					}
+	footer {
+		margin-top: 20px;
+		margin-bottom: 20px;	
+		padding: 20px;
+		margin-bottom: 20px;
+		width: 100%;
+		justify-content:center;
+		text-align: center;
+		gap: 20px;
+	}
+		footer .autor {
+			padding-top: 8px;
+			font-weight: 600;
+		}
+@media screen and (min-width: 801px) {
+	#caja section {
+		width: 70%;
+		}
+	#caja aside {
+		width: 30%;
+		}
+		aside .wit h3 {
+			font-size: 30px;
+		}
+	}
+@media screen and (max-width: 800px) {
+	#caja aside {
+		flex-direction:row;
+		justify-content:space-between;
+	}
+		#caja aside .wit {
+			width: 45%;
+		}
+		aside .wit h3 {
+			font-size: 25px;
+		}
+}
+@media screen and (max-width: 480px) {
+	#caja aside {
+		flex-direction:column;
+		justify-content:center;
+	}
+		#caja aside .wit {
+			width: 100%;
+		}
+		aside .wit h3 {
+			font-size: 25px;
+		}
+}
